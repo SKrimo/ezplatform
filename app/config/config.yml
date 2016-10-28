@@ -49,6 +49,12 @@ stash:
     # Disable tracking of cache values to avoid large disk use when using web profiler
     tracking_values: false
 
+# HttpCache settings
+# By default 'local' (Symfony HttpCache Proxy), but by setting it to 'http' you can point it to Varnish
+ezpublish:
+    http_cache:
+        purge_type: %purge_type%
+
 framework:
     esi:             ~
     translator:      { fallback: "%locale_fallback%" }
